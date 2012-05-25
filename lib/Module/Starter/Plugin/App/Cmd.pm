@@ -166,8 +166,9 @@ sub opt_spec {
     # Example options
     #
     # return (
-    #     [ 'name=s' => "Name", {default => SUPER::config->{name} || undef} ],
+    #     [ 'name=s' => "Name", {default => \$SUPER::config->{name} || undef} ],
     # );
+    return ();
 }
 
 sub validate_args {
@@ -195,10 +196,6 @@ use strict;
 use warnings;
 use parent '$base';
 
-# require 'My::Dependency';
-# Tip: Using 'require' instead of 'use' will save memory and make startup faster
-
-
 # Documentation
 
 sub abstract {
@@ -222,7 +219,7 @@ sub opt_spec {
     return (
         # Example options
         #
-        # [ "familiar" => "Use an informal greeting", {default => SUPER::config->{familiar} || undef} ],
+        # [ "familiar" => "Use an informal greeting", {default => \$SUPER::config->{familiar} || undef} ],
         
         \$class->SUPER::opt_spec,  # Include global options
     );
@@ -234,6 +231,9 @@ sub opt_spec {
 sub execute {
     my (\$self, \$opt, \$args) = \@_;
     
+    # require 'My::Dependency';
+    # Tip: Using 'require' instead of 'use' will save memory and make startup faster
+
     # Command code goes here
 }
 
