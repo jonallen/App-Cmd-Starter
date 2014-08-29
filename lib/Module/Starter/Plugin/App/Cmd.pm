@@ -16,7 +16,7 @@ after 'create_modules' => sub {
     $self->create_script;
 }, 'Module::Starter::Simple';
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 =head1 NAME
