@@ -41,8 +41,8 @@ Options:
     --distro=name       Distribution name (optional)
     --dir=dirname       Directory name to create new module in (optional)
     
-    --script=name       Name of the command-line application to create
-    --commands=foo,bar  Comma separated list of commands to create
+    --script=name       Name of the command-line application to create (required)
+    --commands=foo,bar  Comma separated list of commands to create (required)
 
     --builder=module    Build with 'ExtUtils::MakeMaker' or 'Module::Build'
     --eumm              Same as --builder=ExtUtils::MakeMaker
@@ -60,12 +60,13 @@ Options:
     --help              Show this message
 
 Available Licenses:
-    perl, bsd, gpl, lgpl, mit, apache
+    perl, artistic, artistic2, mit, mozilla, mozilla2, bsd, freebsd, cc0,
+    gpl, lgpl, gpl3, lgpl3, agpl3, apache, qpl
 
 Example:
 
-    appcmd-starter --module=Foo::Bar,Foo::Bat \
-        --author="Andy Lester" --email=andy@petdance.com
+    appcmd-starter --module=Foo::Bar --script=foo --commands=bar,baz \
+        --author="JJ Allen" --email=jj@jonallen.info
 
 =head1 DESCRIPTION
 
