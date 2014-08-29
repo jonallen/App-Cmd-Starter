@@ -14,3 +14,8 @@ App-Cmd-Starter*
 .DS_Store
 MANIFEST.bak
 MANIFEST
+/META.yml
+
+/MYMETA.json
+
+/MYMETA.yml
