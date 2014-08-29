@@ -10,6 +10,16 @@ build_requires 'Test::More';
 requires 'Class::Monkey';
 requires 'Module::Starter::Simple';
 
+resources(
+        'repository', => {
+            web => 'https://github.com/jonallen/App-Cmd-Starter',
+            url => 'git://github.com/jonallen/App-Cmd-Starter.git',
+            type => 'git',
+        },
+);
+
+install_script 'script/appcmd-starter';
+
 auto_install;
 
 WriteAll;
